@@ -7,7 +7,7 @@ const RoomDetail = () => {
     const infoCardStyle = "border-solid border-2 border-black/30 w-full rounded-3xl h-64 flex"; 
 
     return (
-        <div className="flex flex-col items-center mt-1.5">
+        <div className="flex flex-col items-center mt-1.5 ml-16">
             <div className="w-1/2 flex flex-col gap-5 justify-between">
             <Link to="/room-info">
                 <div className={`${infoCardStyle} group`}>
