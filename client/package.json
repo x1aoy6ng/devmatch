@@ -10,11 +10,12 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@aptos-labs/wallet-adapter-ant-design": "^2.0.0",
-    "@aptos-labs/wallet-adapter-react": "^2.1.2",
+    "@aptos-labs/wallet-adapter-ant-design": "^2.6.3",
+    "@aptos-labs/wallet-adapter-react": "^2.5.1",
     "@okwallet/aptos-wallet-adapter": "^0.0.4",
     "aos": "^2.3.4",
     "dotenv": "^16.4.5",
+    "petra-plugin-wallet-adapter": "^0.4.5",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-icon": "^1.0.0",
