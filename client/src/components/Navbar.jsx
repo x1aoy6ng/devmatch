@@ -7,6 +7,19 @@ import { FaWallet } from "react-icons/fa6"; // Wallet Icon
 const navButton = "mx-4 cursor-pointer"
 const buttonSize = 30;
 const Navbar = () => {
+    //TODO: Implement Dark Theme
+    /*const setDarkMode = () => {
+        document.querySelector("div").setAttribute("data-theme", "dark");
+    }
+
+    const setLightMode = () => {
+        document.querySelector("div").setAttribute("data-theme", "light");
+    }
+
+    const toggleTheme = (e) => {
+        if(e.target.checked) setDarkMode();
+    }*/
+
     return (
         <nav className="w-full flex flex-row justify-evenly mt-4 relative">
             <div className="absolute top-0 left-20 cursor-pointer">Logo</div>
