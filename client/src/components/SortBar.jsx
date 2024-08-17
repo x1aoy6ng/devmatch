@@ -30,13 +30,13 @@ const SortBar = () => {
             <div>               
                 <p>Guest Rating</p>
 
-                <input type="radio" />
+                <input type="radio" className="cursor-pointer"/>
                 <label htmlFor="">  5</label>
                 <br/>
-                <input type="radio" />
+                <input type="radio" className="cursor-pointer"/>
                 <label htmlFor=""> &gt; 4</label>
                 <br/>
-                <input type="radio" />
+                <input type="radio" className="cursor-pointer"/>
                 <label htmlFor=""> &gt; 3</label>
                 <br/>
             </div>
@@ -52,16 +52,19 @@ const SortBar = () => {
             <div className="mt-2 flex flex-col items-center justify-center">
                 <div className={numOfGuestStyle}>
                     <p>Adult</p>
-                    <CiCirclePlus className="ml-5" fontSize={30}/>
+                    <CiCirclePlus id="adult-plus" className="ml-5 cursor-pointer" fontSize={30}/>
                     <p className="text-lg">2</p>
-                    <CiCircleMinus fontSize={30}/>
+                    <CiCircleMinus id="adult-minus" className="cursor-pointer" fontSize={30}/>
                 </div>
 
                 <div className={numOfGuestStyle}>
+                    <div>
                     <p>Children</p>
-                    <CiCirclePlus fontSize={30}/>
+                    <p className="text-xs">Age 0-17</p>
+                    </div>
+                    <CiCirclePlus id="children-plus" fontSize={30}/>
                     <p className="text-lg">2</p>
-                    <CiCircleMinus fontSize={30}/>
+                    <CiCircleMinus id="children-minus" fontSize={30}/>
                 </div>
             </div>
 
