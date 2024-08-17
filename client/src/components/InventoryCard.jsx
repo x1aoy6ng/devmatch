@@ -3,22 +3,16 @@ import { BsInfoCircle } from 'react-icons/bs';
 
 const InventoryCard = () => {
     return (
-        <div className='flex flex-col flex-1 items-center justify-start w-full mf:mt-0 mt-10'>
-            <div className='p-3 justify-end items-start flex-col rounded-xl h-40 sm:w-72 w-full my-5 eth-card white-glassmorphism'>
-                <div className='flex justify-between flex-col w-full h-full'>
-                    <div className='flex justify-between items-start'>
-                        <div className='w-10 h-10 rounded-full border-2 border-white flex justify-center items-center'>
-                            <SiEthereum fontSize={21} color='#fff'/>
-                        </div>
-                        <BsInfoCircle fontSize={17} color='#fff'/>
-                    </div>
+        <div className="w-full flex flex-col justify-center items-center">
+            <h1 className="font-bold text-3xl text-red-700">Your NFT Ticket</h1>
+            <div className="w-4/5 h-1/2 mt-10 mb-40 border-2 border-black border-solid p-10 rounded-lg">
+                <div className="w-64 flex flex-col border-2 border-black border-solid pb-24 rounded-md"> 
+                    <img className='rounded-t-md' src="https://i.scdn.co/image/ab67616d0000b27312fc853d36215f51c478e2d9" alt="" />
+
                     <div>
-                        <p className='text-white font-light text-sm'>
-                            Address
-                        </p>
-                         <p className='text-white font-semibold text-lg mt-1'>
-                            Ehtereum
-                        </p>
+                        <p>Name:</p>
+
+                        <p>Description:</p>
                     </div>
                 </div>
             </div>
