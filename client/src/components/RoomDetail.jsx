@@ -1,6 +1,7 @@
 import { FaBed } from "react-icons/fa"; // Bed Icon
 import { FaWifi } from "react-icons/fa"; // Wi-Fi Icon
 import { FaWater } from "react-icons/fa"; // Water Icon
+import { Outlet, Link } from "react-router-dom";
 
 const RoomInfo = () => {
     const iconSize = 30;
@@ -9,6 +10,7 @@ const RoomInfo = () => {
     return (
         <div className="flex flex-col gap-2 justify-between">
             
+            <Link to="/room-info">
             <div className={`top-20 flex flex-row ${infoCardStyle}`}> 
               <img className="absolute left-0 h-full rounded-l-3xl" src="https://images.trvl-media.com/lodging/1000000/50000/47200/47194/82efec83.jpg?impolicy=fcrop&w=1200&h=800&p=1&q=medium" alt="standardRoom.jpg" />
 
@@ -48,6 +50,7 @@ const RoomInfo = () => {
                 </div>
               </div>
             </div>
+            </Link>
 
             <div className={`top-96 ${infoCardStyle}`}>
                 <img className="absolute left-0 h-full rounded-l-3xl" src="https://images.trvl-media.com/lodging/1000000/50000/47200/47194/8e6e9989.jpg?impolicy=fcrop&w=1200&h=800&p=1&q=medium" alt="superiorRoom.jpg" />
