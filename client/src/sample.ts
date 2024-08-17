@@ -6,41 +6,51 @@
  */
 
 import * as dotenv from "dotenv";
-import { Account, Aptos, AptosConfig, Network, NetworkToNetworkName } from "@aptos-labs/ts-sdk";
-
+import { Account, AccountAddress, Aptos, AptosConfig, Ed25519PrivateKey, Network, NetworkToNetworkName } from "@aptos-labs/ts-sdk";
+import { WalletSelector } from "@aptos-labs/wallet-adapter-ant-design";
+import { useWallet } from "@aptos-labs/wallet-adapter-react";
 const INITIAL_BALANCE = 100_000_000;
 
 // Setup the client
-const APTOS_NETWORK: Network = Network.DEVNET;
+const APTOS_NETWORK : Network = Network.DEVNET;
 const config = new AptosConfig({ network: APTOS_NETWORK });
 const aptos = new Aptos(config);
+let seatNumber = 0;
 
-const example = async () => {
-  console.log(
-    "This example will create and fund Alice and Bob, then Alice account will create a collection and a digital asset in that collection and tranfer it to Bob.",
-  );
+const example = async (c) => {
 
-  // Create Alice and Bob accounts
-  const alice = Account.generate();
-  const bob = Account.generate();
+  if (c) {
+    console.log("I'm connected");
+  } else {
+    console.log("I'm not connected");
+  }
 
-  console.log("=== Addresses ===\n");
-  console.log(`Alice's address is: ${alice.accountAddress}`);
+  /*
+  // Seller and buyer account
+  const privateKey = new Ed25519PrivateKey("0x840ffe65166a5eb90b5709d3be679d57bf25981521e40954460a876a579f25d3");
+  const address = AccountAddress.from("67e2ab960b69f0305a0e9e9d7b8ae49aa361453a2fe9eabce2b0ffb01977097f");
+  const seller = Account.fromPrivateKey({privateKey, address});
+  const buyer = Account.generate();
+
+  // Uncomment if wish to view seller address
+  // console.log(`Seller's address is: ${seller.accountAddress}`);
 
   // Fund and create the accounts
   await aptos.fundAccount({
-    accountAddress: alice.accountAddress,
+    accountAddress: seller.accountAddress,
     amount: INITIAL_BALANCE,
   });
   await aptos.fundAccount({
-    accountAddress: bob.accountAddress,
+    accountAddress: buyer.accountAddress,
     amount: INITIAL_BALANCE,
   });
 
-  const collectionName = "Example Collection";
-  const collectionDescription = "Example description.";
+  const collectionName = "Jujutsu Kaisen Exhibition Ticket Collection";
+  const collectionDescription = "Come and view the Jujutsu Kaisen Exhibition, where you can enjoy things about Jujutsu Kaisen.";
   const collectionURI = "aptos.dev";
 
+  // Uncomment if new seller address
+  /* 
   // Create the collection
   const createCollectionTransaction = await aptos.createCollectionTransaction({
     creator: alice,
@@ -49,64 +59,62 @@ const example = async () => {
     uri: collectionURI,
   });
 
-  console.log("\n=== Create the collection ===\n");
   let committedTxn = await aptos.signAndSubmitTransaction({ signer: alice, transaction: createCollectionTransaction });
+  let pendingTxn = await aptos.waitForTransaction({ transactionHash: committedTxn.hash }); 
+  console.log("The pendingTxn is" + pendingTxn.hash);
+  
+  
+  let pendingTxn = await aptos.waitForTransaction({ transactionHash: "0x5fcabfc2fe0c928333a149afb267198b8d0b651ab06d75d0a525efbb1c916894"});
 
-  let pendingTxn = await aptos.waitForTransaction({ transactionHash: committedTxn.hash });
-
-  const alicesCollection = await aptos.getCollectionData({
-    creatorAddress: alice.accountAddress,
+  const sellerCollection = await aptos.getCollectionData({
+    creatorAddress: seller.accountAddress,
     collectionName,
     minimumLedgerVersion: BigInt(pendingTxn.version),
   });
-  console.log(`Alice's collection: ${JSON.stringify(alicesCollection, null, 4)}`);
 
-  const tokenName = "Example Asset";
-  const tokenDescription = "Example asset description.";
+  // NFT
+  const tokenName = "Jujutsu Kaisen Exhibition Ticket";
+  const tokenDescription = "Seat Number " + seatNumber ;
+  seatNumber++;
   const tokenURI = "aptos.dev/asset";
 
-  console.log("\n=== Alice Mints the digital asset ===\n");
-
   const mintTokenTransaction = await aptos.mintDigitalAssetTransaction({
-    creator: alice,
+    creator: seller,
     collection: collectionName,
     description: tokenDescription,
     name: tokenName,
     uri: tokenURI,
   });
 
-  committedTxn = await aptos.signAndSubmitTransaction({ signer: alice, transaction: mintTokenTransaction });
+  let committedTxn = await aptos.signAndSubmitTransaction({ signer: seller, transaction: mintTokenTransaction });
   pendingTxn = await aptos.waitForTransaction({ transactionHash: committedTxn.hash });
 
-  const alicesDigitalAsset = await aptos.getOwnedDigitalAssets({
-    ownerAddress: alice.accountAddress,
+  const sellerDigitalAsset = await aptos.getOwnedDigitalAssets({
+    ownerAddress: seller.accountAddress,
     minimumLedgerVersion: BigInt(pendingTxn.version),
   });
-  console.log(`Alice's digital assets balance: ${alicesDigitalAsset.length}`);
-
-  console.log(`Alice's digital asset: ${JSON.stringify(alicesDigitalAsset[0], null, 4)}`);
-
-  console.log("\n=== Transfer the digital asset to Bob ===\n");
 
   const transferTransaction = await aptos.transferDigitalAssetTransaction({
-    sender: alice,
-    digitalAssetAddress: alicesDigitalAsset[0].token_data_id,
-    recipient: bob.accountAddress,
+    sender: seller,
+    digitalAssetAddress: sellerDigitalAsset[0].token_data_id,
+    recipient: buyer.accountAddress,
   });
-  committedTxn = await aptos.signAndSubmitTransaction({ signer: alice, transaction: transferTransaction });
+
+  committedTxn = await aptos.signAndSubmitTransaction({ signer: seller, transaction: transferTransaction });
   pendingTxn = await aptos.waitForTransaction({ transactionHash: committedTxn.hash });
 
   const alicesDigitalAssetsAfter = await aptos.getOwnedDigitalAssets({
-    ownerAddress: alice.accountAddress,
+    ownerAddress: seller.accountAddress,
     minimumLedgerVersion: BigInt(pendingTxn.version),
   });
   console.log(`Alices's digital assets balance: ${alicesDigitalAssetsAfter.length}`);
 
   const bobDigitalAssetsAfter = await aptos.getOwnedDigitalAssets({
-    ownerAddress: bob.accountAddress,
+    ownerAddress: buyer.accountAddress,
     minimumLedgerVersion: BigInt(pendingTxn.version),
   });
   console.log(`Bob's digital assets balance: ${bobDigitalAssetsAfter.length}`);
+  */
 };
 
 export default example
