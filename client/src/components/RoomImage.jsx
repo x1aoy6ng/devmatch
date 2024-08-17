@@ -1,7 +1,7 @@
+// TODO: Change Images
 const RoomImage = () => {
     return (
         <div className="w-full flex justify-center items-center">
-            {//TODO: Change Images}
             <div className="rounded-lg border-1 border-solid border-black w-5/6 h-92 relative overflow-hidden">
                 <div className="w-full h-full relative flex">
                     <img className="w-1/2 h-full object-cover" src="https://images.trvl-media.com/lodging/1000000/50000/47200/47194/01401c78.jpg?impolicy=resizecrop&rw=1200&ra=fit" alt="pool.jpg" />
