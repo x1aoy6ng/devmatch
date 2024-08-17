@@ -1,5 +1,5 @@
 import Navbar from '../Navbar'
-import RoomInfo from '../RoomDetail'
+import RoomInfo from '../RoomInfo'
 import SortBar from '../SortBar'
 
 const Search = () => {
