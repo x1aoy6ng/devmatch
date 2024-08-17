@@ -21,7 +21,7 @@ const Navbar = () => {
     }*/
 
     return (
-        <nav className="w-full flex flex-row justify-evenly mt-4 relative">
+        <nav className="w-full flex flex-row justify-evenly">
             <div className="absolute top-0 left-20 cursor-pointer">Logo</div>
             <div className="flex flex-row absolute top-0 right-10">
                 <MdOutlineDarkMode fontSize={buttonSize} className={navButton}/>
