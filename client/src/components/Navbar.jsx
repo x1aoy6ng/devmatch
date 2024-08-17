@@ -22,7 +22,7 @@ const Navbar = () => {
     }*/
 
     return (
-        <nav className="w-full flex items-center justify-between relative">
+        <nav className="w-full flex items-center justify-between">
             <div className="absolute top-5 left-20 cursor-pointer text-3xl font-bold">Logo</div>
             <div className="flex items-center absolute top-5 right-10">
                 <MdOutlineDarkMode 
