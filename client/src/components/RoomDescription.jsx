@@ -1,6 +1,6 @@
 const RoomDescription = () => {
     return (
-        <div className="w-full flex flex-row mt-10">
+        <div className="w-full flex flex-row mt-10 mb-40">
             <div className="flex flex-col w-3/5 ml-28">
                 <div className="border-solid border-black border-2">
                     <h1 className="text-3xl font-bold py-3 pl-5 flex">Standard Room</h1>
