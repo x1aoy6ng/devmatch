@@ -1,4 +1,3 @@
-// TODO: Change Images
 const RoomImage = () => {
     return (
         <div className="w-full flex justify-center items-center">
