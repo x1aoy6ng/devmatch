@@ -1,6 +1,6 @@
 function HeroSection(){
     return (
-        <button className="rounded-full">Save Changes</button>
+        <p></p>
     );
 }
 

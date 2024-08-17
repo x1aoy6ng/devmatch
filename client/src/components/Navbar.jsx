@@ -4,8 +4,9 @@ import { MdDarkMode } from "react-icons/md"; // Darkmode
 import { BsFillTicketDetailedFill } from "react-icons/bs"; // Booking Details
 import { FaWallet } from "react-icons/fa6"; // Wallet Icon
 
-const navButton = "mx-4 cursor-pointer"
-const buttonSize = 30;
+const navButton = "cursor-pointer"
+const modeSize = 30;
+const walletSize = 24;
 const Navbar = () => {
     //TODO: Implement Dark Theme
     /*const setDarkMode = () => {
@@ -21,17 +22,19 @@ const Navbar = () => {
     }*/
 
     return (
-        <nav className="w-full flex flex-row justify-evenly">
-            <div className="absolute top-0 left-20 cursor-pointer">Logo</div>
-            <div className="flex flex-row absolute top-0 right-10">
-                <MdOutlineDarkMode fontSize={buttonSize} className={navButton}/>
-
-                <div className='flex flex-row rounded-lg p-1.5 font-bold bg-blue-400 text-white ml-4'>
-                    Connect Wallet&ensp;<FaWallet fontSize={buttonSize}/>
+        <nav className="w-full flex items-center justify-between relative">
+            <div className="absolute top-5 left-20 cursor-pointer text-3xl font-bold">Logo</div>
+            <div className="flex items-center absolute top-5 right-10">
+                <MdOutlineDarkMode 
+                    fontSize={modeSize} 
+                    className={`self-center ${navButton} mr-6`} 
+                />
+                <div className="flex items-center rounded-full px-6 py-3 font-bold bg-black text-white">
+                    CONNECT WALLET&ensp;&ensp;<FaWallet fontSize={walletSize}/>
                 </div>
             </div>
         </nav>
-    );
+    );    
 }
 
 export default Navbar;
