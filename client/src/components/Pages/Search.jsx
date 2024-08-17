@@ -1,6 +1,7 @@
 import Navbar from '../Navbar'
 import RoomDetail from '../RoomDetail'
 import SortBar from '../SortBar'
+import Footer from '../Footer'
 
 const Search = () => {
     return (
@@ -10,7 +11,9 @@ const Search = () => {
           <SortBar/>
           <RoomDetail/>
           </div>
+          <Footer/>
         </div>
+        
     )
 }
 
