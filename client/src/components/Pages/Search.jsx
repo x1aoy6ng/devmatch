@@ -7,7 +7,7 @@ const Search = () => {
     return (
         <div className='w-full min-h-screen'>
           <Navbar/>
-          <div className='pt-28 flex'>
+          <div className='pt-32 flex mb-40'>
           <SortBar/>
           <RoomDetail/>
           </div>
