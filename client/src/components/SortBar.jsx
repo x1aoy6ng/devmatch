@@ -1,3 +1,4 @@
+
 import { CiCirclePlus } from "react-icons/ci"; // Plus Button
 import { CiCircleMinus } from "react-icons/ci"; // Minus Button
 import { IoIosArrowDown } from "react-icons/io"; // Arrow Down
@@ -9,19 +10,19 @@ const SortBar = () => {
     const numOfGuestStyle = "flex flex-row gap-2 items-center my-2";
 
     return (
-        <div className="flex flex-col absolute top-20 left-10 gap-4 border-solid border-2 border-black/30 rounded-xl w-60 p-4">
+        <div className="flex flex-col ml-10 gap-4 border-solid border-2 border-black/30 rounded-xl w-60 p-4">
             <p>Price per night</p>
 
             <div className="flex flex-row gap-4">
                 <div className="flex flex-col">
                     <p>Min</p>
-                    <input type="text" className={inputStyles}/>
+                    <input type="text" placeholder=" ETH" className={inputStyles}/>
                 </div>
                     
 
                 <div className="flex flex-col">
                     <p>Min</p>
-                    <input type="text" className={inputStyles}/>
+                    <input type="text" placeholder=" ETH" className={inputStyles}/>
                 </div>
             </div>
 
