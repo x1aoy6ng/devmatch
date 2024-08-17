@@ -1,9 +1,9 @@
 import React from 'react';
 
-import logo1 from '/src/assets/img/oyo.png';
-import logo2 from '/src/assets/img/ritz.jpg';
+import logo1 from '/src/assets/img/ticket2u.webp';
+import logo2 from '/src/assets/img/bookmyshow.png';
 import logo3 from '/src/assets/img/ruma.jpg';
-import logo4 from '/src/assets/img/genting-skyworlds-hotel.jpg';
+import logo4 from '/src/assets/img/jumpshop.png';
 import logo5 from '/src/assets/img/sunway.png';
 
 const logos = [logo1, logo2, logo3, logo4, logo5];

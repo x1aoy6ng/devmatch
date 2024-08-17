@@ -11,37 +11,37 @@ function Cards() {
       <div className='max-w-screen-lg mx-auto px-4'>
         <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8'>
           <CardItem
-            src='/src/assets/img/kuala-lumpur.jpg'
-            text='Kuala Lumpur, Malaysia'
+            src='/src/assets/img/jujutsukaisen.jpg'
+            text='Jujutsu Kaishen Exhibition'
             label='Best seller'
           />
           <CardItem
-            src='/src/assets/img/melaka.jpg'
-            text='Melaka, Malaysia'
-            label='Featured'
-            path='/'
-          />
-          <CardItem
-            src='/src/assets/img/kota-kinabalu.jpg'
-            text='Kota Kinabalu, Malaysia'
-            label='Exclusive'
-            path='/'
-          />
-          <CardItem
-            src='/src/assets/img/genting-highlands.jpg'
-            text='Genting Highlands, Malaysia'
-            label='Popular'
-            path='/'
-          />
-          <CardItem
-            src='/src/assets/img/johor-bahru.jpg'
-            text='Johor Bahru, Malaysia'
+            src='/src/assets/img/fullmetal.jpg'
+            text='Fullmetal Alchemist Exhibition'
             label='Staff Favorite'
             path='/'
           />
           <CardItem
-            src='/src/assets/img/ipoh.jpg'
-            text='Ipoh, Malaysia'
+            src='/src/assets/img/onepiece.jpg'
+            text='One Piece Asia Tour'
+            label='Popular'
+            path='/'
+          />
+          <CardItem
+            src='/src/assets/img/naruto.webp'
+            text='Naruto Pop Up Store'
+            label='Featured'
+            path='/'
+          />
+          <CardItem
+            src='/src/assets/img/attack.jpeg'
+            text='Attack On Titan: Final Exhibition'
+            label='Popular'
+            path='/'
+          />
+          <CardItem
+            src='/src/assets/img/chainsawman.jpg'
+            text='Chainsaw Man Exhibition'
             label='New Arrival'
             path='/'
           />
