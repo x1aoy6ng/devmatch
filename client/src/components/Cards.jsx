@@ -4,7 +4,10 @@ import CardItem from './CardItem';
 function Cards() {
   return (
     <div className='py-16 bg-white'>
-      <h1 className='text-4xl font-bold text-center mb-12'>Explore Our Top Picks</h1>
+      <h1 className='text-4xl font-bold text-center mb-14 relative group'>
+        Explore Our Top Picks
+        <span className="absolute left-1/2 transform -translate-x-1/2 bottom-[-20px] h-1 w-40 bg-blue-500 rounded-full transition-all duration-300 ease-in-out group-hover:w-64"></span>
+      </h1>
       <div className='max-w-screen-lg mx-auto px-4'>
         <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8'>
           <CardItem
