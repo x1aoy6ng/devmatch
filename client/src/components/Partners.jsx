@@ -1,4 +1,6 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 import logo1 from '/src/assets/img/ticket2u.webp';
 import logo2 from '/src/assets/img/bookmyshow.png';
@@ -9,20 +11,33 @@ import logo5 from '/src/assets/img/sunway.png';
 const logos = [logo1, logo2, logo3, logo4, logo5];
 
 function Partners() {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      easing: 'ease-in-out',
+      once: false,
+    });
+  }, []);
+
   return (
     <div className='py-16 bg-gray-100'>
-      <h2 className='text-4xl font-bold text-center mb-14 relative group'>
+      <h2 className='text-4xl font-bold text-center mb-14 relative group' data-aos="fade-up">
         Our Partners
         <span className="absolute left-1/2 transform -translate-x-1/2 bottom-[-15px] h-1 w-20 bg-blue-500 rounded-full transition-all duration-300 ease-in-out group-hover:w-32"></span>
       </h2>
       <div className='max-w-screen-lg mx-auto px-4'>
-        <div className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8 mb-5'>
+        <div className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8 mb-8'>
           {logos.map((logo, index) => (
-            <div key={index} className='flex justify-center'>
+            <div 
+              key={index} 
+              className='flex justify-center' 
+              data-aos="zoom-in" 
+              data-aos-delay={index * 100}
+            >
               <img
                 src={logo}
                 alt={`Partner Logo ${index + 1}`}
-                className='w-36 h-36 object-cover rounded-full transform transition-transform duration-300 hover:scale-110'
+                className='w-36 h-36 object-cover rounded-full shadow-2xl transform transition-transform duration-300 hover:scale-110'
               />
             </div>
           ))}
