@@ -1,7 +1,5 @@
 import { CiCirclePlus } from "react-icons/ci"; // Plus Button
 import { CiCircleMinus } from "react-icons/ci"; // Minus Button
-import { FaBed } from "react-icons/fa"; // Bed Icon
-import { FaWifi } from "react-icons/fa"; // Wi-Fi Icon
 import { IoIosArrowDown } from "react-icons/io"; // Arrow Down
 import { IoIosArrowUp } from "react-icons/io"; // Arrow Up
 
