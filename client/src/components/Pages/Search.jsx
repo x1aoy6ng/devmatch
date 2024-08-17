@@ -1,5 +1,5 @@
 import Navbar from '../Navbar'
-import RoomInfo from '../RoomDetail'
+import RoomDetail from '../RoomDetail'
 import SortBar from '../SortBar'
 
 const Search = () => {
@@ -7,7 +7,7 @@ const Search = () => {
         <div className='w-full min-h-screen'>
           <Navbar/>
           <SortBar/>
-          <RoomInfo/>
+          <RoomDetail/>
         </div>
     )
 }

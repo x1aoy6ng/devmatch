@@ -4,8 +4,31 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Home from './components/Pages/Home'
 import Search from './components/Pages/Search'
 import RoomInfo from './components/Pages/RoomInfo'
+import { AptosWalletAdapterProvider } from "@aptos-labs/wallet-adapter-react";
+import { OKXWallet } from "@okwallet/aptos-wallet-adapter";
+import { Network } from "@aptos-labs/ts-sdk";
 
-export default function App(){
+
+export const WalletProvider = ({ children }) => {
+  const wallets = [
+    new OKXWallet()
+  ];
+ 
+  return (
+    <AptosWalletAdapterProvider
+      plugins={wallets}
+      autoConnect={true}
+      dappConfig={{ network: Network.MAINNET }}
+      onError={(error) => {
+    console.log("error", error);
+  }}
+    >
+      <App />
+    </AptosWalletAdapterProvider>
+  );
+};
+
+const App = () => {
   return (
     <BrowserRouter>
       <Routes>
@@ -16,3 +39,5 @@ export default function App(){
     </BrowserRouter>
   );
 }
+
+export default WalletProvider
