@@ -22,9 +22,9 @@ const Navbar = () => {
     }*/
 
     return (
-        <nav className="w-full flex items-center justify-between relative">
-            <div className="absolute top-5 left-20 cursor-pointer text-3xl font-bold">Logo</div>
-            <div className="flex items-center absolute top-5 right-10">
+        <nav className="w-full flex items-center justify-between py-3 px-8">
+            <div className="cursor-pointer text-3xl font-bold">Logo</div>
+            <div className="flex items-center">
                 <MdOutlineDarkMode 
                     fontSize={modeSize} 
                     className={`self-center ${navButton} mr-6`} 
