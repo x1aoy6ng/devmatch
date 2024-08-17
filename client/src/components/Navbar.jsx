@@ -13,8 +13,6 @@ const Navbar = () => {
             <div className="flex flex-row absolute top-0 right-10">
                 <MdOutlineDarkMode fontSize={buttonSize} className={navButton}/>
 
-                <BsFillTicketDetailedFill fontSize={buttonSize} className={navButton}/>
-
                 <div className='flex flex-row rounded-lg p-1.5 font-bold bg-blue-400 text-white ml-4'>
                     Connect Wallet&ensp;<FaWallet fontSize={buttonSize}/>
                 </div>
