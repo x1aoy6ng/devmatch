@@ -1,10 +1,10 @@
 [package]
-name = "ticket_seller"
+name = "smthgood"
 version = "1.0.0"
 authors = []
 
 [addresses]
-ticket_seller_addr='7948e24ad25a7092cc76a17abf5a741e51f13eb16ead6245eb5cd96284ea09f2'
+ticket_seller_addr = '8d04c2dc796847e0b9283943a0986171c3c0149cd42a4bc97eb3afb03d6c673b'
 
 [dev-addresses]
 
