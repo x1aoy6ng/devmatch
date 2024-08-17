@@ -1,4 +1,4 @@
-import { FaBed } from "react-icons/fa"; // Bed Icon
+import { FaBed, FaWifi } from "react-icons/fa"; // Bed Icon
 import { FaWater } from "react-icons/fa"; // Water Icon
 import { Link } from "react-router-dom";
 
@@ -29,15 +29,15 @@ const RoomDetail = () => {
                         <div className="space-y-2 mt-3">
                             <div className="flex items-center">
                                 <FaBed fontSize={iconSize}/>
-                                <p className="ml-3">2 Twin Beds</p>
+                                <p className="ml-3">1 Double bed OR 2 Single Beds</p>
                             </div>
                             <div className="flex items-center">
-                                <FaWater fontSize={iconSize}/>
-                                <p className="ml-3">River View</p>
+                                <FaWifi fontSize={iconSize}/>
+                                <p className="ml-3">Free Wi-Fi</p>
                             </div>
                         </div>
                         <div className="text-red-600 font-bold text-lg mt-3">
-                            ETH 0.1/Night
+                            ETH 0.05/Night
                         </div>
                     </div>
                 </div>
