@@ -1,15 +1,18 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-function CardItem({ src, text, label, path }) {
+function CardItem({ src, text, label, path, animation }) {
   return (
     <Link
       to={path}
-      className='block w-full bg-white rounded-lg shadow-lg overflow-hidden transform transition-transform hover:scale-105'
+      target='_blank'
+      className='block w-full bg-white rounded-lg shadow-lg overflow-hidden transform transition-transform duration-300 ease-in-out'
+      data-aos={animation}
+      data-aos-duration="1000"
     >
       <figure className='relative w-full pb-[67%] overflow-hidden'>
         <img
-          className='absolute inset-0 w-full h-full object-cover'
+          className='absolute inset-0 w-full h-full object-cover transition-transform duration-300 ease-in-out hover:scale-110'
           alt='Destination Image'
           src={src}
         />

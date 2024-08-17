@@ -7,7 +7,7 @@ const SortBar = () => {
     const buttonStyles = "border-solid border-2 border-black rounded-lg w-24 h-10 flex items-center justify-center mt-5"
 
     return (
-        <div className="flex flex-col ml-10 mb-5 gap-4 border-solid border-2 border-black/30 rounded-xl w-60 p-4">
+        <div className="flex flex-col ml-20 gap-4 border-solid border-2 border-black/30 rounded-xl w-60 p-4">
             <p>Price per ticket</p>
 
             <div className="flex flex-row gap-4">

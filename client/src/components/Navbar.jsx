@@ -25,8 +25,8 @@ const Navbar = () => {
     }*/
 
     return (
-        <nav className="w-full flex items-center justify-between py-5 px-8 fixed bg-white shadow-lg z-10">
-            <div className="cursor-pointer text-3xl font-bold ml-14 flex">SMTG <SiHotelsdotcom fontSize={30} className={`self-center ${navButton} mx-3`}/> </div>
+        <nav className="w-full flex items-center justify-between py-5 pl-10 pr-20 fixed bg-neutral-300 shadow-lg z-10">
+            <div className="cursor-pointer text-3xl font-bold ml-14 flex"><a href="/">SMTG</a><SiHotelsdotcom fontSize={30} className={`self-center ${navButton} mx-3`}/> </div>
             <div className="flex items-center">
                 <MdOutlineDarkMode 
                     fontSize={modeSize} 
