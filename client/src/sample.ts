@@ -24,7 +24,7 @@ const example = async (account) => {
       // Seller and buyer account
   const privateKey = new Ed25519PrivateKey("0x840ffe65166a5eb90b5709d3be679d57bf25981521e40954460a876a579f25d3");
   const address = AccountAddress.from("67e2ab960b69f0305a0e9e9d7b8ae49aa361453a2fe9eabce2b0ffb01977097f");
-  const seller = Account.fromPrivateKey({privateKey, address});
+  const seller = Account.fromPrivateKey({privateKey});
   const buyer = Account.generate();
   await aptos.fundAccount({
     accountAddress: account.address,

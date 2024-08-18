@@ -59,10 +59,7 @@ const RoomDescription = () => {
             </div>
 
             <div className="absolute right-36 top-0 flex flex-col justify-center items-center">
-                <div onClick={ () => example(account)}
-                  className="bg-blue-600 text-white cursor-pointer font-bold flex justify-center items-center px-14 rounded-lg py-3 hover:bg-blue-500 transition duration-300">
-                  Buy Now<FaCartShopping className="self-center ml-2" />
-                </div>
+                
 
                 <div className="flex flex-col items-center shadow-2xl w-full rounded-3xl py-5 p-2 bg-zinc-100">
                     <div className="flex flex-row w-full ml-5 h-full font-semibold">
@@ -74,7 +71,7 @@ const RoomDescription = () => {
                     </div>
                 </div>
 
-                <div onClick={handleBuyNowClick}
+                <div onClick={() => example(account)}
                   className="bg-blue-600 mt-10 text-white cursor-pointer font-bold flex justify-center items-center px-16 rounded-lg py-3 hover:bg-blue-500 transition duration-300">
                   Buy Now<FaCartShopping className="self-center ml-2" />
                 </div>
