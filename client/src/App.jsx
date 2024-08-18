@@ -7,11 +7,12 @@ import RoomInfo from './components/Pages/RoomInfo'
 import AccountInventory from './components/Pages/AccountInventory'
 import { AptosWalletAdapterProvider } from "@aptos-labs/wallet-adapter-react";
 import { OKXWallet } from "@okwallet/aptos-wallet-adapter";
+import { PetraWallet } from "petra-plugin-wallet-adapter"
 import { Network } from "@aptos-labs/ts-sdk";
 
 export const WalletProvider = ({ children }) => {
   const wallets = [
-    new OKXWallet()
+    new PetraWallet()
   ];
  
   return (
