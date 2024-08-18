@@ -15,17 +15,9 @@ const INITIAL_BALANCE = 100_000_000;
 const APTOS_NETWORK : Network = Network.DEVNET;
 const config = new AptosConfig({ network: APTOS_NETWORK });
 const aptos = new Aptos(config);
-let seatNumber = 0;
 
-const example = async (c) => {
-
-  if (c) {
-    console.log("I'm connected");
-  } else {
-    console.log("I'm not connected");
-  }
-
-  /*
+  
+  
   // Seller and buyer account
   const privateKey = new Ed25519PrivateKey("0x840ffe65166a5eb90b5709d3be679d57bf25981521e40954460a876a579f25d3");
   const address = AccountAddress.from("67e2ab960b69f0305a0e9e9d7b8ae49aa361453a2fe9eabce2b0ffb01977097f");
@@ -62,7 +54,7 @@ const example = async (c) => {
   let committedTxn = await aptos.signAndSubmitTransaction({ signer: alice, transaction: createCollectionTransaction });
   let pendingTxn = await aptos.waitForTransaction({ transactionHash: committedTxn.hash }); 
   console.log("The pendingTxn is" + pendingTxn.hash);
-  
+  */
   
   let pendingTxn = await aptos.waitForTransaction({ transactionHash: "0x5fcabfc2fe0c928333a149afb267198b8d0b651ab06d75d0a525efbb1c916894"});
 
@@ -114,7 +106,7 @@ const example = async (c) => {
     minimumLedgerVersion: BigInt(pendingTxn.version),
   });
   console.log(`Bob's digital assets balance: ${bobDigitalAssetsAfter.length}`);
-  */
+  
 };
 
 export default example
