@@ -3,6 +3,7 @@ import RoomImage from '../RoomImage'
 import BookingInfoButton from '../BookingInfoButton';
 import BookingDescription from '../RoomDescription';
 import Footer from '../Footer';
+import BackToTopButton from '../BackToTop';
 
 const RoomInfo = () => {
     return(
@@ -14,6 +15,7 @@ const RoomInfo = () => {
             <BookingInfoButton/>
             <BookingDescription/>
             <Footer />
+            <BackToTopButton />
         </div>
     );
 }

@@ -2,6 +2,7 @@ import Navbar from '../Navbar'
 import RoomDetail from '../RoomDetail'
 import SortBar from '../SortBar'
 import Footer from '../Footer'
+import BackToTopButton from '../BackToTop';
 
 const Search = () => {
     return (
@@ -12,6 +13,7 @@ const Search = () => {
           <RoomDetail/>
           </div>
           <Footer/>
+          <BackToTopButton />
         </div>
         
     )
