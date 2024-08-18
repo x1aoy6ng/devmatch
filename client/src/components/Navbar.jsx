@@ -29,7 +29,6 @@ const Navbar = () => {
         <nav className="w-full flex items-center justify-between py-5 pl-10 pr-20 fixed bg-neutral-300 shadow-lg z-10">
             <div className="cursor-pointer text-3xl font-bold ml-14 flex"><a href="/">SMTG</a><SiHotelsdotcom fontSize={30} className={`self-center ${navButton} mx-3`}/> </div>
             <div className="flex items-center">
-                <div className="border-2 border-black border-solid cursor-pointer" onClick={example}>button</div>
                 <MdOutlineDarkMode 
                     fontSize={modeSize} 
                     className={`self-center ${navButton} mr-6`}     
