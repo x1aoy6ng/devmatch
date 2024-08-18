@@ -32,12 +32,12 @@ const RoomDescription = () => {
     return (
         <div className="relative w-full flex flex-row mt-10 mb-40">
             <div className="flex flex-col w-3/5 ml-28">
-                <div className="flex justify-center items-center border-solid border-black border-2 text-pink-700">
-                    <h1 className="text-xl font-bold py-3 pl-5 flex">Jujutsu Kaishen Exhibition -  
-                        <FaTicketAlt className="self-center mt-1 mx-1"/> Ticket Information</h1>
+                <div className="flex justify-center items-center border-solid border-black border-2 text-black rounded-t-2xl">
+                    <h1 className="text-xl font-bold py-3 pl-5 flex">Jujutsu Kaishen Exhibition
+                        <FaTicketAlt fontSize={23} className="mt-1 mx-1 ml-4 text-blue-500"/> Ticket Information</h1>
                 </div>
 
-                <div className="mt-5 border-solid border-black border-2 rounded-lg py-6">
+                <div className="mt-4 border-solid border-black border-2 rounded-b-2xl py-6">
                     <div className="relative">
                         <p className={ticketNameStyle}>Normal &#40;Adult&#41;</p>
                         <p className={ticketPriceStyle}>ETH 0.06</p>
