@@ -40,13 +40,13 @@ const RoomDescription = () => {
                 <div className="mt-4 border-solid border-black border-2 rounded-b-2xl py-6">
                     <div className="relative">
                         <p className={ticketNameStyle}>Normal &#40;Adult&#41;</p>
-                        <p className={ticketPriceStyle}>ETH 0.06</p>
+                        <p className={ticketPriceStyle}>APT 0.06</p>
                         <hr className={hrStyle}/>
                         </div>
                         
                         <div className="relative">
                         <p className={`mt-5 ${ticketNameStyle}`}>Package A</p>
-                        <p className={ticketPriceStyle}>ETH 0.07</p>
+                        <p className={ticketPriceStyle}>APT 0.07</p>
                         <p className={packageInfoStyle}>
                             * Included 1 Admission Ticket 
                             <br />
@@ -59,7 +59,7 @@ const RoomDescription = () => {
                         
                         <div className="relative">
                         <p className={`mt-5 ${ticketNameStyle}`}>Package B</p>
-                        <p className={ticketPriceStyle}>ETH 0.08</p>
+                        <p className={ticketPriceStyle}>APT 0.08</p>
                         <p className={packageInfoStyle}>
                             * Included 1 Admission Ticket
                             <br />

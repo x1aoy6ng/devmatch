@@ -29,7 +29,7 @@ const RoomDetail = () => {
                                 </div>
                             </div>
                             <div className="text-red-600 font-bold text-lg mt-3">
-                                Starts From ETH 0.06/Ticket
+                                Starts from APT 0.06 / ticket
                             </div>
                         </div>
                     </div>
@@ -54,7 +54,7 @@ const RoomDetail = () => {
                                 </div>
                             </div>
                             <div className="text-red-600 font-bold text-lg mt-3">
-                                Starts From ETH 0.05/Ticket
+                                Starts from APT 0.05 / ticket
                             </div>
                         </div>
                     </div>
