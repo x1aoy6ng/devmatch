@@ -30,11 +30,11 @@ function HeroSection() {
       </h1>
       
       <p 
-        className="text-white text-lg md:text-2xl mt-2 font-bold" 
+        className="text-white text-lg md:text-2xl mt-3 font-semibold" 
         data-aos="fade-up" 
         data-aos-delay="200"
       >
-        What are you waiting for?
+        Experience seamless booking for exhibitions, events, and more with our intuitive booking system. 
       </p>
       
       <div className="flex flex-col md:flex-row mt-8 space-y-4 md:space-y-0 md:space-x-4">
