@@ -25,7 +25,7 @@ const RoomDescription = () => {
     };
 
     const ticketNameStyle = "ml-10 font-bold text-pink-700";
-    const ticketPriceStyle = "absolute right-32 top-0 ml-10 text-pink-700";
+    const ticketPriceStyle = "absolute right-32 top-0 ml-10 text-red-500 font-bold text-xl";
     const hrStyle = "border-dashed border-black/60 border-1 mt-5";
     const packageInfoStyle = "ml-10 mt-2 text-pink-900";
 
@@ -40,13 +40,13 @@ const RoomDescription = () => {
                 <div className="mt-5 border-solid border-black border-2 rounded-lg py-6">
                     <div className="relative">
                         <p className={ticketNameStyle}>Normal &#40;Adult&#41;</p>
-                        <p className={ticketPriceStyle}>ETH0.06</p>
+                        <p className={ticketPriceStyle}>ETH 0.06</p>
                         <hr className={hrStyle}/>
                         </div>
                         
                         <div className="relative">
                         <p className={`mt-5 ${ticketNameStyle}`}>Package A</p>
-                        <p className={ticketPriceStyle}>ETH0.065</p>
+                        <p className={ticketPriceStyle}>ETH 0.07</p>
                         <p className={packageInfoStyle}>
                             * Included 1 Admission Ticket 
                             <br />
@@ -59,7 +59,7 @@ const RoomDescription = () => {
                         
                         <div className="relative">
                         <p className={`mt-5 ${ticketNameStyle}`}>Package B</p>
-                        <p className={ticketPriceStyle}>ETH0.07</p>
+                        <p className={ticketPriceStyle}>ETH 0.08</p>
                         <p className={packageInfoStyle}>
                             * Included 1 Admission Ticket
                             <br />
@@ -75,8 +75,8 @@ const RoomDescription = () => {
 
             <div className="absolute right-36 top-0 flex flex-col justify-center items-center">
                 <div onClick={handleBuyNowClick}
-                  className="bg-blue-600 text-white cursor-pointer font-bold flex justify-center items-center px-14 rounded-lg py-2 hover:bg-blue-500 transition duration-300">
-                  Buy Now<FaCartShopping className="self-center ml-1" />
+                  className="bg-blue-600 text-white cursor-pointer font-bold flex justify-center items-center px-14 rounded-lg py-3 hover:bg-blue-500 transition duration-300">
+                  Buy Now<FaCartShopping className="self-center ml-2" />
                 </div>
 
                 <div className="flex flex-col items-center border-solid border-black border-2 w-full mt-5 rounded-md py-5 text-pink-700">
