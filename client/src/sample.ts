@@ -16,7 +16,7 @@ const APTOS_NETWORK : Network = Network.DEVNET;
 const config = new AptosConfig({ network: APTOS_NETWORK });
 const aptos = new Aptos(config);
 
-  
+const example = async () => { 
   
   // Seller and buyer account
   const privateKey = new Ed25519PrivateKey("0x840ffe65166a5eb90b5709d3be679d57bf25981521e40954460a876a579f25d3");
@@ -66,8 +66,7 @@ const aptos = new Aptos(config);
 
   // NFT
   const tokenName = "Jujutsu Kaisen Exhibition Ticket";
-  const tokenDescription = "Seat Number " + seatNumber ;
-  seatNumber++;
+  const tokenDescription = "Exhibition Ticket: ";
   const tokenURI = "aptos.dev/asset";
 
   const mintTokenTransaction = await aptos.mintDigitalAssetTransaction({
