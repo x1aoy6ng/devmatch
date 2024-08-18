@@ -1,6 +1,7 @@
 import Navbar from "../Navbar";
 import Footer from "../Footer";
 import InventoryCard from "../InventoryCard";
+import BackToTopButton from '../BackToTop';
 
 const AccountInventory = () => {
     return (
@@ -10,6 +11,7 @@ const AccountInventory = () => {
                 <InventoryCard/>
             </div>
             <Footer/>
+            <BackToTopButton />
         </div>
     );
 }
