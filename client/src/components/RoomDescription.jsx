@@ -3,26 +3,11 @@ import { FaCartShopping } from "react-icons/fa6"; // Shopping Cart Icon
 import { FaLocationDot } from "react-icons/fa6"; // Location Icon
 import { FaCalendarAlt } from "react-icons/fa"; // Calendar Icon
 import { useWallet } from "@aptos-labs/wallet-adapter-react";
-import { useState, useEffect } from "react";
-
-const ifWalletIsNotConnected = async (connected, hasChecked) => {
-    try {
-        if (!connected && hasChecked) {
-            alert("No Account Connected");
-        }
-    } catch (error) {
-        alert(error);
-    }
-};
+import { useState, useEffect, Component } from "react";
+import example from '../sample'
 
 const RoomDescription = () => {
-    const { connected } = useWallet();
-    const [hasChecked, setHasChecked] = useState(false);
-
-    const handleBuyNowClick = () => {
-        if(ifWalletIsNotConnected(connected, hasChecked)) setHasChecked(true);
-        
-    };
+    let { account } = useWallet();
 
     const ticketNameStyle = "ml-10 font-bold text-pink-700";
     const ticketPriceStyle = "absolute right-32 top-0 ml-10 text-red-500 font-bold text-xl";
@@ -74,7 +59,7 @@ const RoomDescription = () => {
             </div>
 
             <div className="absolute right-36 top-0 flex flex-col justify-center items-center">
-                <div onClick={handleBuyNowClick}
+                <div onClick={ () => example(account)}
                   className="bg-blue-600 text-white cursor-pointer font-bold flex justify-center items-center px-14 rounded-lg py-3 hover:bg-blue-500 transition duration-300">
                   Buy Now<FaCartShopping className="self-center ml-2" />
                 </div>
