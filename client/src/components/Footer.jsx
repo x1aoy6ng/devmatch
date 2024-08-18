@@ -16,7 +16,7 @@ const Footer = () => {
                             <SiHotelsdotcom fontSize={28} className={`ml-3 ${navButton}`} />
                         </h4>
                         <p className="text-gray-400">
-                            We are your go-to platform for booking concert tickets. Discover your favorite artists and get the best seats at the best prices.
+                        SMTG simplifies booking for a wide range of events, from concerts and exhibitions to exclusive gatherings. Our platform offers an easy and intuitive booking experience, with real-time availability and the best options tailored to your needs. Enjoy hassle-free access to your favorite events and make unforgettable memories with just a few clicks.
                         </p>
                     </div>
 
@@ -26,8 +26,8 @@ const Footer = () => {
                         <ul className="space-y-2">
                             <li><a href="/" className="text-gray-400 hover:text-white">Home</a></li>
                             <li><a href="/search" target='_blank' className="text-gray-400 hover:text-white">Search</a></li>
+                            <li><a href="#" className="text-gray-400 hover:text-white">Services</a></li>
                             <li><a href="#" className="text-gray-400 hover:text-white">About Us</a></li>
-                            <li><a href="#" className="text-gray-400 hover:text-white">Contact</a></li>
                         </ul>
                     </div>
 
@@ -46,7 +46,7 @@ const Footer = () => {
                 </div>
 
                 <div className="border-t border-gray-600 mt-8 pt-4 text-center">
-                    <p className="text-gray-400 text-sm mt-5">© 2024 SMTG Concert Booking. All rights reserved.</p>
+                    <p className="text-gray-400 text-sm mt-5">© 2024 SMTG Booking System. 20205201314 (123456-A) All rights reserved.</p>
                 </div>
             </div>
         </footer>
