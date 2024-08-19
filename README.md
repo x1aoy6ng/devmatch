@@ -10,9 +10,9 @@ This project aims to solve the trust issues in event ticket booking system by le
 ## Technology Stack
 - __Blockchain__: Aptos
 - __Smart Contracts__: Move language
-- __Frontend__: React.js, TailwindCSS
-- __Backend__: Node.js
-- __Database__: (Not required)Data stored in blockchain
+- __Frontend__: React, Vite Development tool, TailwindCSS
+- __Backend__: Aptos TS SDK, Aptos Wallet Adapter, Node based Move commands
+- __Database__: (No) Data stored in blockchain
 
 ## Set up and Installation
 To set up the project locally:
